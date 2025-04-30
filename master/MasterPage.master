@@ -1,0 +1,248 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="master_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Career | Agile Partners</title>
+<meta name="description" content="Make your career in Managed IT services with Agile Partners." />
+<meta name="keywords" content="Managed IT services, Remote Infrastructure Management System, Exchange Server Management ,NOC Monitoring , IT service desk , .net Development, SharePoint Development , SEO Optimization" />    
+<link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico" />
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../js/script.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="wrapper">
+            <!--==================Header Start===========================-->
+            <div id="header">
+                <h1>
+                    <a href="http://www.agilepartnersinc.com/">
+                        <img src="../images/APlogo.png" alt="Agile Partners" title="Agile Partners" />
+                    </a>
+                </h1>
+                <div class="topInfo">
+                    <div class="topLinks">
+                        <ul>
+                            <li>
+                                <img align="left" style="margin: 3px 5px 0 0px;" title="Home" alt="Home" src="../images/homeicon.png" />
+                                <a title="Home" href="http://www.agilepartnersinc.com/">Home</a></li>
+                            <li>
+                                <img align="left" style="margin: 3px 5px 0 0px;" title="Contact Us" alt="Contact Us"
+                                    src="../images/contacticon.png" />
+                                <a title="Contact Us" href="../contact-us/contact-us.aspx">Contact Us</a></li>
+                            <li>
+                                <img align="left" style="margin: 3px 5px 0 0px;" title="Sitemap" alt="Sitemap" src="../images/sitemapicon.png" />
+                                <a title="Sitemap" href="../sitemap.html">Sitemap</a></li>
+                        </ul>
+                    </div>
+                    <div class="conInfo">
+                        <span><font color="#0d9ac4">Sales Queries?</font><br />
+                            <font color="#000000"><b>Toll Free: 1-800-578-0213</b></font> </span>
+                    </div>
+                </div>
+                <div class="mainMenu">
+                    <ul class="menu" id="menu">
+                        <li><a href="../aboutus.html" class="menulink" title="About Us">About Us</a>
+                            <ul>
+                                <li><a href="../OurInfrastructure.html" title="Our Infrastructure">Our Infrastructure
+                                </a></li>
+                                <li><a href="../TechnicalSkills.html" title="Technical Skills">Technical Skills </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="../RIMS.html" class="menulink" title="Remote Infrastructure Management System">
+                            RIMS</a>
+                            <ul>
+                                <li><a href="../RemoteServerAdministration.html" title="Remote Server Administration">
+                                    Remote Server Administration </a></li>
+                                <li><a href="#" title="Exchange Server Management">Exchange Server Management</a></li>
+                                <li><a href="../ITservicedesk.html" title="IT Service Desk">IT Service Desk</a></li>
+                                <li><a href="../remoteNOCservices.html" title="Remote NOC Services">Remote NOC Services</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../remotedesktopmanagement.html" class="menulink" title="Remote Desktop Management">
+                            Remote Desktop Management</a> </li>
+                        <li><a href="../webSolution.html" class="menulink" title="Web Solutions">Web Solutions</a>
+                            <ul>
+                                <li><a href="../webDevelopment.html" title="Web Development">Web Development</a></li>
+                                <li><a href="../sharePointdevelopment.html" title="SharePoint Development">SharePoint
+                                    Development</a></li>
+                                <li><a href="../SEOServices.html" title="SEO Services">SEO Services</a></li>
+                            </ul>
+                        </li>
+                        <li class="last"><a href="../career.html" class="menulink" title="Careers">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--==================Header End===========================-->
+            <!--==================Middle Body Start===========================-->
+            <div id="middle">
+                <div class="middleImg">
+                    <div class="clientSpeak">
+                        <div class="rightnews">
+                            <div class="newsmain">
+                                <div style="width: 243px;" id="ctl00_panCustomQuote">
+                                    <table width="243" cellspacing="0" cellpadding="0" border="0" style="border-left: 1px solid #c0e2f3;
+                                        padding-left: 3px;" class="border-form">
+                                        <tbody>
+                                            <tr>
+                                                <td height="30" class="admin_heading">
+                                                    <img width="16" height="16" align="middle" src="../images/comments.png" alt="" />
+                                                    <span id="ctl00_Label1">Response Form</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="body_text">
+                                                    <table width="243" cellspacing="0" cellpadding="4" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="2">
+                                                                    <div style="color: Red; display: none;" id="ctl00_ValidationSummary1">
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="30%">
+                                                                    Name:
+                                                                </td>
+                                                                <td>
+                                                                    <%--   <input type="text" style="width: 145px;" id="ctl00_txtName" maxlength="30" name="ctl00$txtName" />--%>
+                                                                    <asp:TextBox ID="txtName" runat="server" Width="145px" MaxLength="30"></asp:TextBox>
+                                                                    <%--   <span style="color: Red; display: none;" id="ctl00_validName"></span>--%>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Company:
+                                                                </td>
+                                                                <td>
+                                                                    <%--        <input type="text" style="width: 145px;" id="ctl00_txtCompany" maxlength="30" name="ctl00$txtCompany" />
+                                                                    <span style="color: Red; display: none;" id="ctl00_validCompany"></span>--%>
+                                                                    <asp:TextBox ID="txtCompany" runat="server" Width="145px" MaxLength="30"></asp:TextBox>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Email:
+                                                                </td>
+                                                                <td>
+                                                                    <%--<input type="text" style="width: 145px;" id="ctl00_txtmail" maxlength="300" name="ctl00$txtmail" />
+                                                                    <span style="color: Red; display: none;" id="ctl00_validEmail"></span><span style="color: Red;
+                                                                        display: none;" id="ctl00_RegEmail"></span>--%>
+                                                                    <asp:TextBox ID="txtEmail" runat="server" Width="145px" MaxLength="30"></asp:TextBox>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Phone:
+                                                                </td>
+                                                                <td>
+                                                                    <%--   <input type="text" style="width: 145px;" id="ctl00_txtPhone" maxlength="30" name="ctl00$txtPhone" />
+                                                                    <span style="color: Red; display: none;" id="ctl00_validOPhone"></span>--%>
+                                                                    <asp:TextBox ID="txtPhone" runat="server" Width="145px" MaxLength="30"></asp:TextBox>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td valign="top">
+                                                                    Comment:
+                                                                </td>
+                                                                <td>
+                                                                    <%--  <textarea id="ctl00_txtComment" cols="16" rows="5" name="ctl00$txtComment"></textarea>
+                                                                    <span style="color: Red; display: none;" id="ctl00_validFeedBack"></span>--%>
+                                                                    <asp:TextBox ID="txtComment" runat="server" TextMode="MultiLine" Height="75px" Width="145px"></asp:TextBox>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td valign="top">
+                                                                    Code:
+                                                                </td>
+                                                                <td>
+                                                                    <table cellspacing="0" cellpadding="0" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td valign="top">
+                                                                                    <%--  <input type="text" style="width: 145px;" id="ctl00_txtImageCode" name="ctl00$txtImageCode" />--%>
+                                                                                    <asp:TextBox ID="txtCode" runat="server" Width="145px"></asp:TextBox>
+                                                                                </td>
+                                                                                <td width="3">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="padding-top: 5px;">
+                                                                                    <%--  <img src="../images/MakeImage.aspx.gif" alt="" />--%>
+                                                                                    <asp:Image ID="imgVerificationCode" ToolTip="Verification Code" runat="server" ImageUrl="~/MakeImage.aspx"
+                                                                                        AlternateText="A6D3G" />
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <span style="color: Red; display: none;" id="ctl00_regCode"></span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    &nbsp;
+                                                                </td>
+                                                                <td>
+                                                                    <%--<input type="image" style="height: 28px; width: 87px; border-width: 0px;" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$imgbtnSubmit&quot;, &quot;&quot;, true, &quot;feedback&quot;, &quot;&quot;, false, false))"
+                                                                        src="../images/submitBtn.jpg" id="ctl00_imgbtnSubmit" name="ctl00$imgbtnSubmit" />--%>
+                                                                    <asp:ImageButton ID="imgbtnSubmit" runat="server" Height="28px" Width="87px" ImageUrl="../images/submitBtn.jpg" />
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aboutus">
+                        <asp:ScriptManager ID="scrpt" runat="server">
+                        </asp:ScriptManager>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <span class="bottomShade"></span>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="footerlink">
+                <ul>
+                    <li><a href="../aboutus.html">About Us&nbsp;|&nbsp;</a> </li>
+                    <li><a href="../RIMS.html">RIMS&nbsp;|&nbsp;</a> </li>
+                    <li><a href="../remotedesktopmanagement.html">Remote Desktop Management &nbsp;|&nbsp;</a></li>
+                    <li><a href="../webSolution.html">Web Solutions&nbsp;|&nbsp;</a></li>
+                    <li><a href="../career.html">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footerlink">
+                <ul>
+                    <li><a href="http://www.agilepartnersinc.com/">Home&nbsp;|&nbsp;</a> </li>
+					<li><a href="../managed-IT-services.html">Managed IT Services &nbsp;|&nbsp;</a></li>
+                    <li><a href="../newsAnnouncements.html">News &amp; Announcement &nbsp;|&nbsp;</a></li>
+                    <li><a href="../contact-us/contact-us.aspx">Contact Us&nbsp;|&nbsp;</a></li>
+                    <li><a href="../termsofuse.html">Terms of Use&nbsp;|&nbsp;</a></li>
+                    <li><a href="../sitemap.html">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var menu = new menu.dd("menu");
+            menu.init("menu", "menuhover");
+        </script>
+
+    </div>
+    </form>
+</body>
+</html>
