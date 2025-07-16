@@ -1,5 +1,4 @@
 import React from 'react';
-import { Zap, Mail, Github, Linkedin, Twitter, ExternalLink } from 'lucide-react';
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -31,9 +30,9 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' }
+    { icon: () => <span className="text-xl">🐙</span>, href: '#', label: 'GitHub' },
+    { icon: () => <span className="text-xl">💼</span>, href: '#', label: 'LinkedIn' },
+    { icon: () => <span className="text-xl">🐦</span>, href: '#', label: 'Twitter' }
   ];
 
   return (
@@ -63,11 +62,11 @@ const Footer = () => {
             
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-blue-400" />
+                <span className="text-blue-400">✉️</span>
                 <span className="text-gray-300">hello@agilepartners-ai.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <ExternalLink className="h-5 w-5 text-blue-400" />
+                <span className="text-blue-400">🔗</span>
                 <a 
                   href="https://aijobsearchagent.online" 
                   target="_blank" 
@@ -94,7 +93,7 @@ const Footer = () => {
                       className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center"
                     >
                       {link.name}
-                      <ExternalLink className="h-3 w-3 ml-1" />
+                      <span className="ml-1">🔗</span>
                     </a>
                   ) : (
                     <button
@@ -185,7 +184,7 @@ const Footer = () => {
                   className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors duration-200"
                   aria-label={social.label}
                 >
-                  <social.icon className="h-5 w-5" />
+                  <social.icon />
                 </a>
               ))}
             </div>

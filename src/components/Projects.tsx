@@ -1,5 +1,4 @@
 import React from 'react';
-import { ExternalLink, Github, Calendar, Users, TrendingUp, Zap } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -129,7 +128,7 @@ const Projects = () => {
                         rel="noopener noreferrer"
                         className="w-10 h-10 bg-white/90 rounded-lg flex items-center justify-center hover:bg-white transition-colors"
                       >
-                        <ExternalLink className="h-5 w-5 text-gray-700" />
+                        <span className="text-xl">🔗</span>
                       </a>
                     </div>
                   )}
@@ -164,7 +163,7 @@ const Projects = () => {
                     <div className="grid grid-cols-2 gap-2">
                       {project.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center space-x-2">
-                          <Zap className="h-4 w-4 text-blue-500" />
+                          <span className="text-blue-500">⚡️</span>
                           <span className="text-sm text-gray-700">{feature}</span>
                         </div>
                       ))}
@@ -174,7 +173,7 @@ const Projects = () => {
                   {/* Tech Stack & Timeline */}
                   <div className="flex flex-wrap gap-4 pt-4 border-t border-gray-100">
                     <div className="flex items-center space-x-2">
-                      <Calendar className="h-4 w-4 text-gray-500" />
+                      <span className="text-gray-500">📅</span>
                       <span className="text-sm text-gray-600">{project.timeline}</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
@@ -199,7 +198,7 @@ const Projects = () => {
                         className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center"
                       >
                         Visit Project
-                        <ExternalLink className="ml-2 h-4 w-4" />
+                        <span className="ml-2">🔗</span>
                       </a>
                     ) : (
                       <button
@@ -224,21 +223,21 @@ const Projects = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="h-8 w-8 text-green-600" />
+                <span className="text-3xl">📈</span>
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">Live & Scaling</h4>
               <p className="text-gray-600 text-sm">AI Job Search Agent serving thousands of users</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="h-8 w-8 text-yellow-600" />
+                <span className="text-3xl">⚡️</span>
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">In Development</h4>
               <p className="text-gray-600 text-sm">GenAI Infrastructure Tool entering beta phase</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-blue-600" />
+                <span className="text-3xl">👥</span>
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">Research Phase</h4>
               <p className="text-gray-600 text-sm">Healthcare AI solutions in early planning</p>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Target, Rocket, ExternalLink } from 'lucide-react';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -17,7 +16,7 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="inline-flex items-center bg-gradient-to-r from-blue-900/30 to-purple-900/30 text-blue-300 border border-blue-500/30 px-4 py-2 rounded-full text-sm font-medium">
-                <Sparkles className="h-4 w-4 mr-2" />
+                <span className="mr-2">✨</span>
                 AI Startup Building Real Solutions
               </div>
               
@@ -50,7 +49,7 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
                 >
-                  <ExternalLink className="h-4 w-4" />
+                  <span>🔗</span>
                 </a>
               </div>
             </div>
@@ -62,7 +61,7 @@ const Hero = () => {
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center group"
               >
                 See Our Projects
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
               </button>
               
               <button
@@ -97,7 +96,7 @@ const Hero = () => {
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center">
-                      <Target className="h-6 w-6 text-white" />
+                      <span className="text-2xl">🎯</span>
                     </div>
                     <div>
                       <h3 className="font-semibold text-white">Job Search AI</h3>
@@ -108,7 +107,7 @@ const Hero = () => {
                   
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center">
-                      <Rocket className="h-6 w-6 text-white" />
+                      <span className="text-2xl">🚀</span>
                     </div>
                     <div>
                       <h3 className="font-semibold text-white">Infrastructure AI</h3>
@@ -119,7 +118,7 @@ const Hero = () => {
                   
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-red-400 to-orange-500 rounded-lg flex items-center justify-center">
-                      <Sparkles className="h-6 w-6 text-white" />
+                      <span className="text-2xl">✨</span>
                     </div>
                     <div>
                       <h3 className="font-semibold text-white">Healthcare AI</h3>

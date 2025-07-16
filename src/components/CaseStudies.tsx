@@ -1,10 +1,9 @@
 import React from 'react';
-import { TrendingUp, Users, ShoppingCart, Factory, ArrowRight } from 'lucide-react';
 
 const CaseStudies = () => {
   const caseStudies = [
     {
-      icon: ShoppingCart,
+      icon: () => <span className="text-2xl">🛒</span>,
       title: "E-commerce Revenue Optimization",
       industry: "Retail",
       challenge: "Global retailer struggling with inventory management and personalization",
@@ -17,7 +16,7 @@ const CaseStudies = () => {
       color: "blue"
     },
     {
-      icon: Factory,
+      icon: () => <span className="text-2xl">🏭</span>,
       title: "Manufacturing Process Automation",
       industry: "Manufacturing",
       challenge: "Quality control issues and production inefficiencies",
@@ -30,7 +29,7 @@ const CaseStudies = () => {
       color: "teal"
     },
     {
-      icon: Users,
+      icon: () => <span className="text-2xl">👥</span>,
       title: "Customer Service Transformation",
       industry: "Financial Services",
       challenge: "High customer service costs and inconsistent response times",
@@ -96,7 +95,7 @@ const CaseStudies = () => {
               className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
             >
               <div className={`w-16 h-16 rounded-lg flex items-center justify-center mb-6 ${getColorClasses(study.color)}`}>
-                <study.icon className="h-8 w-8" />
+                <study.icon />
               </div>
               
               <div className="mb-4">
@@ -126,7 +125,7 @@ const CaseStudies = () => {
                 <ul className="space-y-2">
                   {study.results.map((result, resultIndex) => (
                     <li key={resultIndex} className="flex items-center space-x-2">
-                      <TrendingUp className="h-4 w-4 text-green-500" />
+                      <span className="text-green-500">📈</span>
                       <span className="text-sm text-gray-700">{result}</span>
                     </li>
                   ))}
@@ -135,7 +134,7 @@ const CaseStudies = () => {
               
               <button className="mt-6 text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200 flex items-center group">
                 Read Full Case Study
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
               </button>
             </div>
           ))}

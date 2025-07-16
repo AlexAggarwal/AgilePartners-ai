@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Mail, MessageSquare, Rocket, Send, CheckCircle, ExternalLink } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -47,21 +46,21 @@ const Contact = () => {
 
   const contactOptions = [
     {
-      icon: Mail,
+      icon: () => <span className="text-2xl">✉️</span>,
       title: "General Inquiries",
       description: "Questions about our solutions or company",
       contact: "hello@agilepartners-ai.com",
       action: "Email Us"
     },
     {
-      icon: Rocket,
+      icon: () => <span className="text-2xl">🚀</span>,
       title: "Project Collaboration",
       description: "Have a problem that needs an AI solution?",
       contact: "projects@agilepartners-ai.com",
       action: "Start a Project"
     },
     {
-      icon: MessageSquare,
+      icon: () => <span className="text-2xl">💬</span>,
       title: "Partnership & Investment",
       description: "Interested in partnering or investing?",
       contact: "partnerships@agilepartners-ai.com",
@@ -76,7 +75,7 @@ const Contact = () => {
           <div className="max-w-md mx-auto text-center">
             <div className="bg-white rounded-2xl shadow-xl p-12">
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="h-10 w-10 text-green-600" />
+                <span className="text-4xl">✔️</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Message Received!
@@ -113,14 +112,14 @@ const Contact = () => {
           {contactOptions.map((option, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <option.icon className="h-6 w-6 text-blue-600" />
+                <option.icon />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">{option.title}</h3>
               <p className="text-gray-600 text-sm mb-4">{option.description}</p>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-blue-600 font-medium">{option.contact}</span>
                 <button className="text-blue-600 hover:text-blue-700 transition-colors">
-                  <Mail className="h-4 w-4" />
+                  <span>✉️</span>
                 </button>
               </div>
             </div>
@@ -226,7 +225,7 @@ const Contact = () => {
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center group"
               >
                 Send Message
-                <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <span className="ml-2 group-hover:translate-x-1 transition-transform">➤</span>
               </button>
             </form>
           </div>
@@ -237,19 +236,19 @@ const Contact = () => {
               <h4 className="font-semibold text-gray-900 mb-4">Why Work With Us?</h4>
               <ul className="space-y-3 text-sm text-gray-700">
                 <li className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                  <span className="text-green-500">✔️</span>
                   <span>Proven track record with live AI solutions</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                  <span className="text-green-500">✔️</span>
                   <span>Focus on practical, real-world applications</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                  <span className="text-green-500">✔️</span>
                   <span>Rapid prototyping and iteration</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                  <span className="text-green-500">✔️</span>
                   <span>End-to-end development and deployment</span>
                 </li>
               </ul>
@@ -269,7 +268,7 @@ const Contact = () => {
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-700"
                   >
-                    <ExternalLink className="h-4 w-4" />
+                    <span>🔗</span>
                   </a>
                 </div>
                 <div className="flex items-center justify-between">

@@ -1,19 +1,9 @@
 import React from 'react';
-import { 
-  Brain, 
-  Database, 
-  Bot, 
-  BarChart3, 
-  Shield, 
-  Cog, 
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
-      icon: Brain,
+      icon: () => <span className="text-2xl">🧠</span>,
       title: "AI Strategy & Consulting",
       description: "Comprehensive AI assessment and strategic roadmap development tailored to your business objectives.",
       features: [
@@ -25,7 +15,7 @@ const Services = () => {
       color: "blue"
     },
     {
-      icon: Database,
+      icon: () => <span className="text-2xl">💾</span>,
       title: "Machine Learning Solutions",
       description: "End-to-end ML model development, training, and deployment for predictive analytics and automation.",
       features: [
@@ -37,7 +27,7 @@ const Services = () => {
       color: "teal"
     },
     {
-      icon: Bot,
+      icon: () => <span className="text-2xl">🤖</span>,
       title: "AI-Powered Automation",
       description: "Intelligent process automation using AI to streamline operations and reduce manual workload.",
       features: [
@@ -49,7 +39,7 @@ const Services = () => {
       color: "green"
     },
     {
-      icon: BarChart3,
+      icon: () => <span className="text-2xl">📊</span>,
       title: "Data Analytics & Insights",
       description: "Advanced analytics platforms that transform raw data into actionable business intelligence.",
       features: [
@@ -61,7 +51,7 @@ const Services = () => {
       color: "purple"
     },
     {
-      icon: Shield,
+      icon: () => <span className="text-2xl">🛡️</span>,
       title: "AI Ethics & Governance",
       description: "Responsible AI implementation with proper governance frameworks and ethical guidelines.",
       features: [
@@ -73,7 +63,7 @@ const Services = () => {
       color: "orange"
     },
     {
-      icon: Cog,
+      icon: () => <span className="text-2xl">⚙️</span>,
       title: "AI Infrastructure & DevOps",
       description: "Scalable AI infrastructure setup and MLOps implementation for continuous deployment.",
       features: [
@@ -120,7 +110,7 @@ const Services = () => {
               className="group bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
             >
               <div className={`w-16 h-16 rounded-lg flex items-center justify-center mb-6 transition-all duration-300 ${getColorClasses(service.color)}`}>
-                <service.icon className="h-8 w-8 transition-colors duration-300" />
+                <service.icon />
               </div>
               
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -134,7 +124,7 @@ const Services = () => {
               <ul className="space-y-3 mb-6">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-green-500 mt-0.5 flex-shrink-0">✔️</span>
                     <span className="text-gray-700 text-sm">{feature}</span>
                   </li>
                 ))}
@@ -142,7 +132,7 @@ const Services = () => {
               
               <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200 flex items-center group">
                 Learn More
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
               </button>
             </div>
           ))}

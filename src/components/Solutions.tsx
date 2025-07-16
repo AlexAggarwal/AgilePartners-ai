@@ -1,20 +1,9 @@
 import React from 'react';
-import { 
-  Search, 
-  Cloud, 
-  Heart, 
-  Zap, 
-  ArrowRight,
-  CheckCircle,
-  Users,
-  Building,
-  Stethoscope
-} from 'lucide-react';
 
 const Solutions = () => {
   const solutions = [
     {
-      icon: Search,
+      icon: () => <span className="text-4xl">🔍</span>,
       title: "AI-Powered Job Matching",
       description: "Intelligent job search that understands your skills, preferences, and career goals to find perfect opportunities.",
       industry: "Career & Employment",
@@ -29,7 +18,7 @@ const Solutions = () => {
       statusColor: "bg-green-500"
     },
     {
-      icon: Cloud,
+      icon: () => <span className="text-4xl">☁️</span>,
       title: "Generative Infrastructure",
       description: "AI-powered infrastructure as code that's simpler than Terraform. Describe what you need, and we'll generate it.",
       industry: "DevOps & Cloud",
@@ -44,7 +33,7 @@ const Solutions = () => {
       statusColor: "bg-yellow-500"
     },
     {
-      icon: Heart,
+      icon: () => <span className="text-4xl">❤️</span>,
       title: "Healthcare Intelligence",
       description: "AI solutions for healthcare providers to improve patient outcomes, streamline operations, and reduce costs.",
       industry: "Healthcare",
@@ -62,19 +51,19 @@ const Solutions = () => {
 
   const industries = [
     {
-      icon: Users,
+      icon: () => <span className="text-3xl">👥</span>,
       name: "Employment",
       description: "Connecting talent with opportunities",
       projects: 1
     },
     {
-      icon: Building,
+      icon: () => <span className="text-3xl">🏢</span>,
       name: "Infrastructure",
       description: "Simplifying cloud deployment",
       projects: 1
     },
     {
-      icon: Stethoscope,
+      icon: () => <span className="text-3xl">⚕️</span>,
       name: "Healthcare",
       description: "Improving patient outcomes",
       projects: "Coming Soon"
@@ -103,7 +92,7 @@ const Solutions = () => {
               className="bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <industry.icon className="h-8 w-8 text-blue-600" />
+                <industry.icon />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">{industry.name}</h3>
               <p className="text-gray-600 mb-4">{industry.description}</p>
@@ -126,7 +115,7 @@ const Solutions = () => {
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
                     <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center`}>
-                      <solution.icon className="h-8 w-8 text-white" />
+                      <solution.icon />
                     </div>
                     <div>
                       <div className="flex items-center space-x-3 mb-2">
@@ -149,7 +138,7 @@ const Solutions = () => {
                     <div className="grid grid-cols-1 gap-2">
                       {solution.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center space-x-3">
-                          <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                          <span className="text-green-500 flex-shrink-0">✔️</span>
                           <span className="text-gray-700">{feature}</span>
                         </div>
                       ))}
@@ -161,7 +150,7 @@ const Solutions = () => {
                   <div className={`w-full h-64 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center relative overflow-hidden`}>
                     <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
                     <div className="relative z-10 text-center text-white">
-                      <solution.icon className="h-16 w-16 mx-auto mb-4 opacity-80" />
+                      <solution.icon />
                       <div className="text-lg font-semibold">{solution.status}</div>
                       {solution.status === "Live" && (
                         <div className="text-sm opacity-80 mt-2">Available Now</div>
@@ -191,7 +180,7 @@ const Solutions = () => {
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center group"
             >
               Let's Discuss Your Challenge
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
             </button>
           </div>
         </div>

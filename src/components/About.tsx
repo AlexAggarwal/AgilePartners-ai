@@ -1,25 +1,24 @@
 import React from 'react';
-import { Lightbulb, Target, Rocket, Users, Award, Code, Heart } from 'lucide-react';
 
 const About = () => {
   const values = [
     {
-      icon: Lightbulb,
+      icon: () => <span className="text-2xl">💡</span>,
       title: "Problem-First Approach",
       description: "We start with real problems, not cool technology. Every AI solution we build addresses genuine pain points."
     },
     {
-      icon: Target,
+      icon: () => <span className="text-2xl">🎯</span>,
       title: "Practical Impact",
       description: "We measure success by user adoption and real-world impact, not just technical achievements."
     },
     {
-      icon: Rocket,
+      icon: () => <span className="text-2xl">🚀</span>,
       title: "Rapid Innovation",
       description: "From idea to deployment, we move fast while maintaining quality and user focus."
     },
     {
-      icon: Heart,
+      icon: () => <span className="text-2xl">❤️</span>,
       title: "Human-Centered AI",
       description: "Technology should enhance human capabilities, not replace them. We build AI that empowers people."
     }
@@ -108,7 +107,7 @@ const About = () => {
             {values.map((value, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="h-8 w-8 text-blue-600" />
+                  <value.icon />
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-3">{value.title}</h4>
                 <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
