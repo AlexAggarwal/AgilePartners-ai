@@ -116,67 +116,55 @@ const About = () => {
           </div>
         </div>
 
-        {/* Team */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-12">
-            Meet the Team
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
-                <div className="text-center mb-6">
-                  <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h4 className="font-bold text-gray-900 text-lg">{member.name}</h4>
-                  <p className="text-blue-600 font-medium">{member.role}</p>
-                </div>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">{member.bio}</p>
-                <div className="space-y-2">
-                  <h5 className="font-semibold text-gray-900 text-sm">Expertise:</h5>
-                  <div className="flex flex-wrap gap-2">
-                    {member.expertise.map((skill, skillIndex) => (
-                      <span
-                        key={skillIndex}
-                        className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Timeline */}
+        {/* Timeline - Responsive Horizontal/Vertical Milestones */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-gray-900 text-center mb-12">
             Our Journey
           </h3>
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"></div>
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-                      <div className="text-2xl font-bold text-blue-600 mb-2">{milestone.year}</div>
-                      <h4 className="font-semibold text-gray-900 mb-2">{milestone.title}</h4>
-                      <p className="text-gray-600 text-sm">{milestone.description}</p>
+          <div className="relative w-full flex flex-col items-center">
+            {/* Timeline Line */}
+            <div className="relative w-full flex items-center justify-center" style={{ minHeight: '220px' }}>
+              {/* Horizontal line for desktop, vertical for mobile */}
+              <div className="hidden md:block absolute left-0 right-0 mx-auto h-2 bg-gradient-to-r from-blue-500 via-purple-400 to-purple-600 rounded-full" style={{ top: '50%', zIndex: 0 }}>
+                {/* Bullets aligned with the center axis of each milestone block */}
+                <div className="absolute w-full h-full" style={{ left: 0, right: 0, top: 0, pointerEvents: 'none' }}>
+                  <div className="flex w-full h-full" style={{ position: 'relative' }}>
+                    {milestones.map((_, idx) => (
+                      <div key={idx} className="flex-1 flex justify-center items-center" style={{ position: 'relative' }}>
+                        <span
+                          className="w-6 h-6 rounded-full border-4 border-white bg-purple-600 shadow-lg"
+                          style={{ zIndex: 2 }}
+                        ></span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="md:hidden absolute top-0 bottom-0 mx-auto w-2 bg-gradient-to-b from-blue-500 via-purple-400 to-purple-600 rounded-full" style={{ left: '50%', zIndex: 0 }}></div>
+              {/* Milestones */}
+              <div className="flex md:flex-row flex-col w-full justify-between items-center relative flex-wrap" style={{ zIndex: 1 }}>
+                {milestones.map((milestone, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col items-center group md:w-1/4 w-full"
+                    style={{ maxWidth: '250px', flex: '1 1 200px', margin: '0 8px', position: 'relative', alignItems: 'center', justifyContent: 'center' }}
+                  >
+                    {/* Desktop: alternate above/below line, Mobile: stack vertically */}
+                    <div className={
+                      `flex flex-col items-center justify-center ${
+                        'mb-8 md:mb-0 md:mt-0' +
+                        (index % 2 === 0 ? ' md:mb-60' : ' md:mt-60')
+                      }`
+                    }>
+                      <div className={`bg-white rounded-xl shadow-2xl p-6 border border-gray-100 min-w-[180px] max-w-xs text-center relative group-hover:bg-blue-50 transition-colors duration-300`}>
+                        <div className="text-2xl font-bold text-blue-600 mb-2 group-hover:text-purple-600 transition-colors duration-300">{milestone.year}</div>
+                        <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">{milestone.title}</h4>
+                        <p className="text-gray-600 text-sm group-hover:text-gray-800 transition-colors duration-300">{milestone.description}</p>
+                      </div>
                     </div>
                   </div>
-                  <div className="relative z-10">
-                    <div className="w-4 h-4 bg-white border-4 border-blue-500 rounded-full"></div>
-                  </div>
-                  <div className="w-1/2"></div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>

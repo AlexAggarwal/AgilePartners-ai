@@ -29,40 +29,37 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-white rounded-lg p-1 flex items-center justify-center">
-              <svg viewBox="0 0 200 60" className="w-full h-full">
-                <text x="10" y="25" fill="#1fb6d3" fontSize="16" fontWeight="bold">agile</text>
-                <circle cx="85" cy="20" r="8" fill="#1fb6d3"/>
-                <text x="100" y="25" fill="#333" fontSize="16" fontWeight="bold">p</text>
-                <text x="10" y="45" fill="#333" fontSize="12">partners</text>
-              </svg>
-            </div>
-            <span className="text-xl font-bold text-gray-900">AgilePartners AI</span>
+            <img
+              src="/agile_partners_logo_stroke.png"
+              alt="Agile Partners Logo"
+              className="w-24 h-auto object-contain"
+              style={{ background: 'transparent' }}
+            />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className={`hidden md:flex space-x-8 ${isScrolled ? 'text-gray-900' : 'text-white'}`}> 
             <button
               onClick={() => scrollToSection('solutions')}
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className={`transition-colors duration-200 ${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}
             >
               Solutions
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className={`transition-colors duration-200 ${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}
             >
               Projects
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className={`transition-colors duration-200 ${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className={`transition-colors duration-200 ${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}
             >
               Contact
             </button>

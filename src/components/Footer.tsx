@@ -43,14 +43,12 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-white rounded-lg p-1 flex items-center justify-center">
-                <svg viewBox="0 0 200 60" className="w-full h-full">
-                  <text x="10" y="25" fill="#1fb6d3" fontSize="16" fontWeight="bold">agile</text>
-                  <circle cx="85" cy="20" r="8" fill="#1fb6d3"/>
-                  <text x="100" y="25" fill="#333" fontSize="16" fontWeight="bold">p</text>
-                  <text x="10" y="45" fill="#333" fontSize="12">partners</text>
-                </svg>
-              </div>
+              <img
+              src="/ap_logo_white.png"
+              alt="AP Logo"
+              className="w-10 h-auto object-contain"
+              style={{ background: 'transparent' }}
+              />
               <span className="text-xl font-bold">AgilePartners AI</span>
             </div>
             
@@ -63,7 +61,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <span className="text-blue-400">✉️</span>
-                <span className="text-gray-300">hello@agilepartners-ai.com</span>
+                <span className="text-gray-300">support@agilepartners-ai.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <span className="text-blue-400">🔗</span>

@@ -49,7 +49,7 @@ const Contact = () => {
       icon: () => <span className="text-2xl">✉️</span>,
       title: "General Inquiries",
       description: "Questions about our solutions or company",
-      contact: "hello@agilepartners-ai.com",
+      contact: "support@agilepartners-ai.com",
       action: "Email Us"
     },
     {

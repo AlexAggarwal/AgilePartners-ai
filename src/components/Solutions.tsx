@@ -14,7 +14,7 @@ const Solutions = () => {
         "Application tracking",
         "Interview preparation"
       ],
-      color: "from-green-400 to-blue-500",
+      color: "from-purple-700 to-blue-500",
       statusColor: "bg-green-500"
     },
     {
@@ -105,13 +105,13 @@ const Solutions = () => {
         </div>
 
         {/* Solutions Grid */}
-        <div className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300"
+              className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col"
             >
-              <div className="grid lg:grid-cols-2 gap-8 p-8">
+              <div className="grid lg:grid-cols-1 gap-8 p-8 flex-1">
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
                     <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center`}>
@@ -128,11 +128,9 @@ const Solutions = () => {
                       </div>
                     </div>
                   </div>
-                  
                   <p className="text-gray-600 leading-relaxed text-lg">
                     {solution.description}
                   </p>
-                  
                   <div className="space-y-3">
                     <h4 className="font-semibold text-gray-900">Key Features:</h4>
                     <div className="grid grid-cols-1 gap-2">
@@ -145,7 +143,6 @@ const Solutions = () => {
                     </div>
                   </div>
                 </div>
-                
                 <div className="flex items-center justify-center">
                   <div className={`w-full h-64 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center relative overflow-hidden`}>
                     <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
@@ -153,7 +150,14 @@ const Solutions = () => {
                       <solution.icon />
                       <div className="text-lg font-semibold">{solution.status}</div>
                       {solution.status === "Live" && (
-                        <div className="text-sm opacity-80 mt-2">Available Now</div>
+                        <>
+                          <img
+                            src="/Man_and_AI_2_Glow.png"
+                            alt="Man and AI"
+                            className="mx-auto mt-4 w-32 h-32 object-contain rounded-xl shadow-lg border border-white/30"
+                            style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.12)' }}
+                          />
+                        </>
                       )}
                     </div>
                   </div>
