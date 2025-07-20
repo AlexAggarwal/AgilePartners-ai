@@ -30,7 +30,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img
-              src="/agile_partners_logo_stroke.png"
+              src={isScrolled ? '/agile_partners_logo_original.png' : '/agile_partners_logo_white.png'}
               alt="Agile Partners Logo"
               className="w-24 h-auto object-contain"
               style={{ background: 'transparent' }}
