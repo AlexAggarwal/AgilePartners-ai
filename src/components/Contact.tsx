@@ -108,6 +108,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Options */}
+        {/* TBD: contacts email addresses are linked to corresponding email addresses when created */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {contactOptions.map((option, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
@@ -118,13 +119,13 @@ const Contact = () => {
               <p className="text-gray-600 text-sm mb-4">{option.description}</p>
               <div className="flex items-center justify-between">
                 <a
-                  href={`mailto:${option.contact}`}
+                  href={`mailto: support@agilepartners-ai.com`}
                   className="text-sm text-blue-600 font-medium hover:underline"
                 >
                   {option.contact}
                 </a>
                 <a
-                  href={`mailto:${option.contact}`}
+                  href={`mailto: support@agilepartners-ai.com`}
                   className="text-blue-600 hover:text-blue-700 transition-colors"
                   aria-label={option.action}
                 >
