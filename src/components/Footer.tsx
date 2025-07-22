@@ -61,7 +61,12 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <span className="text-blue-400">✉️</span>
-                <span className="text-gray-300">support@agilepartners-ai.com</span>
+                <a
+                  href="mailto:support@agilepartners-ai.com"
+                  className="text-gray-300 hover:underline"
+                >
+                  support@agilepartners-ai.com
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <span className="text-blue-400">🔗</span>
