@@ -117,10 +117,19 @@ const Contact = () => {
               <h3 className="font-semibold text-gray-900 mb-2">{option.title}</h3>
               <p className="text-gray-600 text-sm mb-4">{option.description}</p>
               <div className="flex items-center justify-between">
-                <span className="text-sm text-blue-600 font-medium">{option.contact}</span>
-                <button className="text-blue-600 hover:text-blue-700 transition-colors">
+                <a
+                  href={`mailto:${option.contact}`}
+                  className="text-sm text-blue-600 font-medium hover:underline"
+                >
+                  {option.contact}
+                </a>
+                <a
+                  href={`mailto:${option.contact}`}
+                  className="text-blue-600 hover:text-blue-700 transition-colors"
+                  aria-label={option.action}
+                >
                   <span>✉️</span>
-                </button>
+                </a>
               </div>
             </div>
           ))}
