@@ -56,13 +56,6 @@ const Team: React.FC = () => {
       mail: "mailto: alex@agilepartnersinc.com"
     },
     {
-      image: "https://drive.google.com/thumbnail?id=18EP-eQovSW7pduE7mSaERO213hobW63U",
-      name: "Rahul Chandai",
-      role: "AI Strategist & Co-Founder",
-      linkedin: "https://www.linkedin.com/in/rchandai/",
-      mail: "#"
-    },
-    {
       image: "https://drive.google.com/thumbnail?id=1FwU4tdaQKljzIjkeFKZnlMouqiTcinJx",
       name: "Mona Aggarwal",
       role: "AI Product Manager & Co-Founder",
